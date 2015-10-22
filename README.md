@@ -1,2 +1,2 @@
 # Redux-ES6
-Redux With ES6 Demo App
+Redux is a design pattern which is introduced to over come few problem of Flux pattren

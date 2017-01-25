@@ -23854,7 +23854,7 @@
 	            switch (action.type) {
 	                case 'nextSlot':
 	                    return _extends({}, state, {
-	                        showSlot: action.value
+	                        text: action.value
 	                    });
 	                default:
 	                    return state;
@@ -23886,6 +23886,8 @@
 	            }
 	            return slot;
 	        }
+
+	        var soltRange = _moment2.default.utc().add(0, "hours").format('HH:mm A') + ' - ' + _moment2.default.utc().add(2, "hours").format('HH:mm A');
 
 	        function getInitialState() {
 	            var appointmentdays = [];
@@ -38824,139 +38826,138 @@
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	/* REACT HOT LOADER */if (false) {
-	  (function () {
-	    var ReactHotAPI = require("/Users/arunkumar/Documents/interview/node_modules/react-hot-api/modules/index.js"),
-	        RootInstanceProvider = require("/Users/arunkumar/Documents/interview/node_modules/react-hot-loader/RootInstanceProvider.js"),
-	        ReactMount = require("react-dom/lib/ReactMount"),
-	        React = require("react");module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () {
-	      return RootInstanceProvider.getRootInstances(ReactMount);
-	    }, React);
-	  })();
-	}try {
-	  (function () {
-
-	    'use strict';
-
-	    Object.defineProperty(exports, "__esModule", {
-	      value: true
-	    });
-
-	    var _createClass = function () {
-	      function defineProperties(target, props) {
-	        for (var i = 0; i < props.length; i++) {
-	          var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	        }
-	      }return function (Constructor, protoProps, staticProps) {
-	        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	      };
-	    }();
-
-	    var _react = __webpack_require__(2);
-
-	    var _react2 = _interopRequireDefault(_react);
-
-	    var _reactRedux = __webpack_require__(179);
-
-	    var _action = __webpack_require__(330);
-
-	    var _daySlot = __webpack_require__(331);
-
-	    var _daySlot2 = _interopRequireDefault(_daySlot);
-
-	    var _slot = __webpack_require__(332);
-
-	    var _slot2 = _interopRequireDefault(_slot);
-
-	    function _interopRequireDefault(obj) {
-	      return obj && obj.__esModule ? obj : { default: obj };
-	    }
-
-	    function _classCallCheck(instance, Constructor) {
-	      if (!(instance instanceof Constructor)) {
-	        throw new TypeError("Cannot call a class as a function");
-	      }
-	    }
-
-	    function _possibleConstructorReturn(self, call) {
-	      if (!self) {
-	        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	      }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-	    }
-
-	    function _inherits(subClass, superClass) {
-	      if (typeof superClass !== "function" && superClass !== null) {
-	        throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-	      }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	    }
-
-	    var App = function (_Component) {
-	      _inherits(App, _Component);
-
-	      function App() {
-	        _classCallCheck(this, App);
-
-	        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-	      }
-
-	      _createClass(App, [{
-	        key: 'render',
-	        value: function render() {
-
-	          var i = 0;
-	          var k = 0;
-	          var counter = 0;
-
-	          return _react2.default.createElement('div', null, this.props.data.appointmentdays.map(function (item) {
-
-	            return _react2.default.createElement(_daySlot2.default, { days: item, id: i, key: i++ });
-	          }), this.props.data.appointmentdays[this.props.data.showSlot].slot.map(function (item) {
-	            return _react2.default.createElement(_slot2.default, { data: item, key: k++ });
-	          }));
-	        }
-	      }]);
-
-	      return App;
-	    }(_react.Component);
-
-	    App.propTypes = {
-	      data: _react.PropTypes.object,
-	      dispatch: _react2.default.PropTypes.func.isRequired
-	    };
-
-	    var mapStateToProps = function mapStateToProps(state) {
-	      return {
-	        data: state.ui
-	      };
-	    };
-
-	    var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-	      return {
-	        dispatch: dispatch
-	      };
-	    };
-
-	    exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
-
-	    /* REACT HOT LOADER */
-	  }).call(undefined);
-	} finally {
-	  if (false) {
 	    (function () {
-	      var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false;if (module.exports && module.makeHot) {
-	        var makeExportsHot = require("/Users/arunkumar/Documents/interview/node_modules/react-hot-loader/makeExportsHot.js");if (makeExportsHot(module, require("react"))) {
-	          foundReactClasses = true;
-	        }var shouldAcceptModule = true && foundReactClasses;if (shouldAcceptModule) {
-	          module.hot.accept(function (err) {
-	            if (err) {
-	              console.error("Cannot apply hot update to " + "app.js" + ": " + err.message);
-	            }
-	          });
-	        }
-	      }module.hot.dispose(function (data) {
-	        data.makeHot = module.makeHot;data.foundReactClasses = foundReactClasses;
-	      });
+	        var ReactHotAPI = require("/Users/arunkumar/Documents/interview/node_modules/react-hot-api/modules/index.js"),
+	            RootInstanceProvider = require("/Users/arunkumar/Documents/interview/node_modules/react-hot-loader/RootInstanceProvider.js"),
+	            ReactMount = require("react-dom/lib/ReactMount"),
+	            React = require("react");module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () {
+	            return RootInstanceProvider.getRootInstances(ReactMount);
+	        }, React);
 	    })();
-	  }
+	}try {
+	    (function () {
+
+	        'use strict';
+
+	        Object.defineProperty(exports, "__esModule", {
+	            value: true
+	        });
+
+	        var _createClass = function () {
+	            function defineProperties(target, props) {
+	                for (var i = 0; i < props.length; i++) {
+	                    var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	                }
+	            }return function (Constructor, protoProps, staticProps) {
+	                if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	            };
+	        }();
+
+	        var _react = __webpack_require__(2);
+
+	        var _react2 = _interopRequireDefault(_react);
+
+	        var _reactRedux = __webpack_require__(179);
+
+	        var _action = __webpack_require__(330);
+
+	        var _daySlot = __webpack_require__(331);
+
+	        var _daySlot2 = _interopRequireDefault(_daySlot);
+
+	        var _slot = __webpack_require__(332);
+
+	        var _slot2 = _interopRequireDefault(_slot);
+
+	        function _interopRequireDefault(obj) {
+	            return obj && obj.__esModule ? obj : { default: obj };
+	        }
+
+	        function _classCallCheck(instance, Constructor) {
+	            if (!(instance instanceof Constructor)) {
+	                throw new TypeError("Cannot call a class as a function");
+	            }
+	        }
+
+	        function _possibleConstructorReturn(self, call) {
+	            if (!self) {
+	                throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	            }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+	        }
+
+	        function _inherits(subClass, superClass) {
+	            if (typeof superClass !== "function" && superClass !== null) {
+	                throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+	            }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	        }
+
+	        var App = function (_Component) {
+	            _inherits(App, _Component);
+
+	            function App() {
+	                _classCallCheck(this, App);
+
+	                return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	            }
+
+	            _createClass(App, [{
+	                key: 'render',
+	                value: function render() {
+	                    console.log(this.props.data);
+	                    var i = 0,
+	                        k = 0;
+
+	                    return _react2.default.createElement('div', null, this.props.data.appointmentdays.map(function (item) {
+
+	                        return _react2.default.createElement(_daySlot2.default, { days: item, id: i, key: i++ });
+	                    }), this.props.data.appointmentdays[this.props.data.showSlot].slot.map(function (item) {
+	                        return _react2.default.createElement(_slot2.default, { data: item, key: k++ });
+	                    }));
+	                }
+	            }]);
+
+	            return App;
+	        }(_react.Component);
+
+	        App.propTypes = {
+	            data: _react.PropTypes.object,
+	            dispatch: _react2.default.PropTypes.func.isRequired
+	        };
+
+	        var mapStateToProps = function mapStateToProps(state) {
+	            return {
+	                data: state.ui
+	            };
+	        };
+
+	        var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+	            return {
+	                dispatch: dispatch
+	            };
+	        };
+
+	        exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
+
+	        /* REACT HOT LOADER */
+	    }).call(undefined);
+	} finally {
+	    if (false) {
+	        (function () {
+	            var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false;if (module.exports && module.makeHot) {
+	                var makeExportsHot = require("/Users/arunkumar/Documents/interview/node_modules/react-hot-loader/makeExportsHot.js");if (makeExportsHot(module, require("react"))) {
+	                    foundReactClasses = true;
+	                }var shouldAcceptModule = true && foundReactClasses;if (shouldAcceptModule) {
+	                    module.hot.accept(function (err) {
+	                        if (err) {
+	                            console.error("Cannot apply hot update to " + "app.js" + ": " + err.message);
+	                        }
+	                    });
+	                }
+	            }module.hot.dispose(function (data) {
+	                data.makeHot = module.makeHot;data.foundReactClasses = foundReactClasses;
+	            });
+	        })();
+	    }
 	}
 
 /***/ },
@@ -39092,15 +39093,16 @@
 	        key: 'showNextSlot',
 	        value: function showNextSlot(event) {
 	          event.preventDefault();
-	          console.log(this.props.days);
-	          (0, _action.showNextSlot)(this.props.dispatch, this.props.id);
+	          if (!!this.props.days.avalible) {
+	            (0, _action.showNextSlot)(this.props.dispatch, this.props.id);
+	          }
 	        }
 	      }, {
 	        key: 'render',
 	        value: function render() {
 	          var _this2 = this;
 
-	          return _react2.default.createElement('span', { className: 'appointment-button-wraper' }, _react2.default.createElement('button', { onClick: function onClick(event) {
+	          return _react2.default.createElement('span', { className: 'appointment-button-wraper' }, _react2.default.createElement('button', { disabled: !this.props.days.avalible, onClick: function onClick(event) {
 	              return _this2.showNextSlot(event);
 	            } }, _react2.default.createElement('div', null, ' ', this.props.days.day, ' '), _react2.default.createElement('div', null, ' ', this.props.days.date, ' '), _react2.default.createElement('div', null, ' ', this.props.days.avalible, ' ', _react2.default.createElement('span', null, 'Avalible'))));
 	        }

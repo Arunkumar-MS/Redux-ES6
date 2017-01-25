@@ -9,17 +9,16 @@ class App extends Component {
         data: PropTypes.object,
         dispatch: React.PropTypes.func.isRequired
     };
-  render() {
 
-    let i =0;
-    let k =0;
-    let counter =0;
+  render() {
+console.log(this.props.data);
+    let i =0, k =0;
 
       return (
           <div>
           {
           this.props.data.appointmentdays.map((item) => {
-            
+
           return  (<DaySlot days = {item} id={i} key={i++}/>);
 
           })

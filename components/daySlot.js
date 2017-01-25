@@ -5,13 +5,14 @@ import {showNextSlot} from '../action';
 
  showNextSlot(event) {
     event.preventDefault();
-    console.log(this.props.days);
-    showNextSlot(this.props.dispatch, this.props.id);
-  }
+    if(!!this.props.days.avalible){
+       showNextSlot(this.props.dispatch, this.props.id);
+     }
+}
   render(){
       return(
         <span className="appointment-button-wraper">
-          <button onClick={(event) => this.showNextSlot(event)}>
+          <button disabled= {!this.props.days.avalible} onClick={(event) => this.showNextSlot(event)} >
             <div> {this.props.days.day} </div>
             <div> {this.props.days.date} </div>
             <div> {this.props.days.avalible} <span>Avalible</span>

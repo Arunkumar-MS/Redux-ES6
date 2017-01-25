@@ -1,13 +1,11 @@
 import moment from 'moment';
 
 
-
-
 export default function ui(state = getInitialState(), action) {
     switch (action.type) {
         case 'nextSlot':
             return {...state,
-                showSlot: action.value
+                text: action.value
             };
         default:
             return state
@@ -39,6 +37,8 @@ function getHourSlot(interval) {
     }
     return slot;
 }
+
+const soltRange =`${moment.utc().add(0, "hours").format('HH:mm A')} - ${moment.utc().add(2, "hours").format('HH:mm A')}`;
 
 function getInitialState() {
     let appointmentdays = [];

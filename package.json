@@ -23,7 +23,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.22.0",
-    "ejs": "^2.5.5",
+    "ejs": "^3.1.5",
     "express": "^4.14.0",
     "install": "^0.8.4",
     "json-loader": "^0.5.4",
